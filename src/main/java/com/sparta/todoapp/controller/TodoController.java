@@ -27,7 +27,7 @@ public class TodoController {
         TodoResponseDTO response = new TodoResponseDTO(todo);
         return ResponseEntity.ok()
                 .body(CommonResponse.<TodoResponseDTO>builder()
-                        .statusCode(HttpStatus.OK.value())
+                        .statuscode(HttpStatus.OK.value())
                         .msg("생성이 완료 되었습니다.")
                         .data(response)
                         .build());
@@ -38,7 +38,7 @@ public class TodoController {
         TodoResponseDTO response = new TodoResponseDTO(todo);
         return ResponseEntity.ok()
                 .body(CommonResponse.<TodoResponseDTO>builder()
-                        .statusCode(HttpStatus.OK.value())
+                        .statuscode(HttpStatus.OK.value())
                         .msg("단건 조회가 완료 되었습니다.")
                         .data(response)
                         .build());
@@ -51,7 +51,7 @@ public class TodoController {
                 .collect(Collectors.toList());
         return ResponseEntity.ok()
                 .body(CommonResponse.<List<TodoResponseDTO>>builder()
-                        .statusCode(HttpStatus.OK.value())
+                        .statuscode(HttpStatus.OK.value())
                         .msg("목록 조회이 완료 되었습니다.")
                         .data(response)
                         .build());
@@ -62,7 +62,7 @@ public class TodoController {
         TodoResponseDTO response = new TodoResponseDTO(todo);
         return ResponseEntity.ok()
                 .body(CommonResponse.<TodoResponseDTO>builder()
-                        .statusCode(HttpStatus.OK.value())
+                        .statuscode(HttpStatus.OK.value())
                         .msg("수정이 완료 되었습니다.")
                         .data(response)
                         .build());
@@ -71,7 +71,7 @@ public class TodoController {
     public ResponseEntity<CommonResponse> deleteTodo(@PathVariable Long todoId, @RequestBody TodoRequestDTO dto) {
         todoService.deleteTodo(todoId, dto.getPassword());
         return ResponseEntity.ok().body(CommonResponse.builder()
-                .statusCode(HttpStatus.OK.value())
+                .statuscode(HttpStatus.OK.value())
                 .msg("삭제가 완료 되었습니다.")
                 .build());
     }
