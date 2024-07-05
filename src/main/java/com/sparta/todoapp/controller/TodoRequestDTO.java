@@ -22,4 +22,5 @@ import lombok.Setter;
                 .userName(userName)
                 .password(password)
                 .build();
+    }
 }

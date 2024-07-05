@@ -22,7 +22,7 @@ public class TodoResponseDTO {
 
     public TodoResponseDTO(Todo todo) {
         this.todoId = todo.getTodoId();
-        this.title = todo.gettitle();
+        this.title = todo.getTitle();
         this.content = todo.getContent();
         this.username = todo.getUserName();
         this.createdAt = todo.getCreatedAt();
