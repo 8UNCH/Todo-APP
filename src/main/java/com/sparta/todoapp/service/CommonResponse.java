@@ -1,4 +1,14 @@
 package com.sparta.todoapp.service;
 
-public class CommonResponse {
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@Builder
+public class CommonResponse<T> {
+    private Integer statuscode;
+    private String msg;
+    private T data;
 }
