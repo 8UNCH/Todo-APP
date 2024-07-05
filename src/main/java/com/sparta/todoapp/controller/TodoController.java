@@ -45,7 +45,7 @@ public class TodoController {
     }
     @GetMapping
     public ResponseEntity<CommonResponse<List<TodoResponseDTO>>> getTodos() {
-        List<Todo> todos = todoService. getTodo();
+        List<Todo> todos = todoService. getTodos();
         List<TodoResponseDTO> response = todos.stream()
                 .map(TodoResponseDTO::new)
                 .collect(Collectors.toList());

@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 public class TodoResponseDTO {
 
     private Long todoId;
+
     private String title;
 
     private String content;
@@ -21,9 +22,9 @@ public class TodoResponseDTO {
 
     public TodoResponseDTO(Todo todo) {
         this.todoId = todo.getTodoId();
-        this.title = todo.getTitle();
+        this.title = todo.gettitle();
         this.content = todo.getContent();
-        this.userName = todo.getUserName();
+        this.username = todo.getUserName();
         this.createdAt = todo.getCreatedAt();
     }
 }
